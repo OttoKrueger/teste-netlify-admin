@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: #2c2c2c;
+  background: #f9f6f1;
+  line-height: 1.6;
+}
+
+header {
+  background: #3b5e2b;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+header p.tagline {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+nav {
+  background: #2e4a21;
+  padding: 0.5rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #d4e8c2;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  border-color: #a8cc80;
+  color: #fff;
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #3b5e2b;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #c8ddb0;
+  padding-bottom: 0.4rem;
+}
+
+/* Hero */
+.hero {
+  background: #e8f0de;
+  border: 1px solid #c8ddb0;
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-placeholder {
+  width: 100%;
+  height: 180px;
+  background: #d6e8c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5a7a40;
+  font-size: 2.5rem;
+}
+
+.card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card-body h3 {
+  font-size: 1.1rem;
+  color: #2e4a21;
+}
+
+.card-body .breed {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+.card-body .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3b5e2b;
+  margin-top: 0.2rem;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.3rem;
+}
+
+/* News */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+}
+
+.news-item img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.news-body {
+  padding: 1.25rem;
+}
+
+.news-body h3 {
+  font-size: 1.15rem;
+  color: #2e4a21;
+  margin-bottom: 0.25rem;
+}
+
+.news-body .date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.6rem;
+}
+
+.news-body p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Contact */
+.contact-section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section p {
+  margin-bottom: 0.4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+form label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #3b5e2b;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fafafa;
+}
+
+form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+form button {
+  align-self: flex-start;
+  background: #3b5e2b;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #2e4a21;
+}
+
+/* Loading / error */
+.loading {
+  color: #666;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.error {
+  color: #a00;
+  padding: 1rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  color: #888;
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
+}

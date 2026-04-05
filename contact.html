@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Baber Farm</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Baber Farm</h1>
+      <p class="tagline">Quality sheep breeding in the heart of the countryside</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/rams.html">Rams For Sale</a></li>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Contact Us</h2>
+
+    <div class="contact-section">
+      <p><strong>Baber Farm</strong></p>
+      <p>123 Farm Lane, Countryside, AB1 2CD</p>
+      <p>Email: info@baberfarm.co.uk</p>
+      <p>Phone: 01234 567890</p>
+    </div>
+
+    <div class="contact-section">
+      <h2>Send a Message</h2>
+      <form id="contact-form" novalidate>
+        <div>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="e.g. John Smith" />
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Your message here&hellip;"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Baber Farm. All rights reserved.</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

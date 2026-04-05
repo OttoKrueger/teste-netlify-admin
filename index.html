@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baber Farm</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Baber Farm</h1>
+      <p class="tagline">Quality sheep breeding in the heart of the countryside</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/rams.html">Rams For Sale</a></li>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="home-content">
+    <div class="hero">
+      <h2>Welcome to Baber Farm</h2>
+      <p>Quality sheep breeding in the heart of the countryside.</p>
+    </div>
+
+    <section>
+      <h2>About Us</h2>
+      <p>Baber Farm has been breeding pedigree sheep for generations. We take pride in producing healthy, high-performing rams with excellent conformation and temperament. Browse our current rams for sale or get in touch to find out more.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Baber Farm. All rights reserved.</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

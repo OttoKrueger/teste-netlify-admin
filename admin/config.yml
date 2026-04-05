@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: rams
+    label: Rams For Sale
+    files:
+      - name: rams
+        label: Rams List
+        file: content/rams.json
+        fields:
+          - label: Rams
+            name: rams
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Breed, name: breed, widget: string}
+              - {label: Price, name: price, widget: number}
+              - {label: Photo, name: photo, widget: image, required: false}
+              - {label: Description, name: description, widget: text}
+
+  - name: news
+    label: Farm News
+    files:
+      - name: news
+        label: News Posts
+        file: content/news.json
+        fields:
+          - label: Posts
+            name: posts
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false}
+              - {label: Photo, name: photo, widget: image, required: false}
+              - {label: Content, name: content, widget: text}
+
+  - name: home
+    label: Home Page
+    files:
+      - name: home
+        label: Home Content
+        file: content/home.json
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Welcome Text, name: welcome_text, widget: text}
